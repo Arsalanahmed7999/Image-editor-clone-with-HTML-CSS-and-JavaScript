@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">imageEditor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Properties
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Adjust opacity</a></li>
+              <li><a class="dropdown-item" href="size.html">Edit Size</a></li>
+              <li><a class="dropdown-item" href="filter.html">Filter image</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="cont">
+    <div class="container flex-column d-flex align-items-center">
+      <!-- Example single danger button -->
+      <nav>
+        <div class="btn-group">
+          <button type="button" class="btn btn-dark dropdown-toggle w-50" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item d-item" href="#">Blur</a></li>
+            <li><a class="dropdown-item d-item" href="#">Color</a></li>
+            <li><a class="dropdown-item d-item" href="#">Brightness</a></li>
+            <li><a class="dropdown-item d-item" href="#">Sepia</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="d-flex flex-column">
+        <h1 class="text-center heading">Filter (BLUR)</h1>
+        <div class="box">
+          <img src="bg.jpg" class="image" alt="" />
+        </div>
+        <div class="buttons blur">
+          <button class="btn btn-dark blurDec">-Blur</button>
+          <button class="btn btn-dark reset">Reset</button>
+          <button class="btn btn-dark blurInc">+Blur</button>
+        </div>
+        <!-- colors -->
+        <div class="buttons color d-none">
+          <button class="btn btn-dark contDec">-Contrast</button>
+          <button class="btn btn-dark satDec">-Saturation</button>
+          <button class="btn btn-dark resetcolor">Reset</button>
+          <button class="btn btn-dark satInc">+Saturation</button>
+          <button class="btn btn-dark contInc">+Contrast</button>
+        </div>
+        <!-- brightness -->
+        <div class="buttons brightness d-none">
+          <button class="btn btn-dark brightnessDec">-Brightness</button>
+          <button class="btn btn-dark resetBrightess">Reset</button>
+          <button class="btn btn-dark brightnessInc">+Brightness</button>
+        </div>
+        <!-- filter sepia -->
+        <div class="buttons sepia d-none">
+          <button class="btn btn-dark sepiaDec">-Sepia</button>
+          <button class="btn btn-dark resetSepia">Reset</button>
+          <button class="btn btn-dark sepiaInc">+Sepia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+<script src="appfilter.js"></script>
+<script src="app.js"></script>
+
+</html>
